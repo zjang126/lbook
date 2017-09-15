@@ -1,0 +1,15 @@
+<?php
+
+namespace App;
+
+class AdminPermission extends Model
+{
+    protected $table='admin_permissions';
+
+    //权限属于哪个角色
+    public function roles()
+    {
+        return $this->belongsToMany(\App\AdminRole::class, 'admin_permission_role', 'role_id', 'permission_id')
+                    ->withPivot([ 'role_id','permission_id']);
+    }
+}
