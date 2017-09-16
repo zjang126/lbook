@@ -180,6 +180,9 @@ return [
         Laravel\Scout\ScoutServiceProvider::class,//用于搜索
         ScoutEngines\Elasticsearch\ElasticsearchProvider::class,
 
+        //debugbar
+        Barryvdh\Debugbar\ServiceProvider::class,
+
     ],
 
     /*
